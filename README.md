@@ -1,5 +1,6 @@
 # Riemannian_MeanFlow
-[Accepted ICML 2026 Paper: **Riemannian MeanFlow for One-Step Generation on Manifolds**](https://arxiv.org/abs/2603.10718)
+Accepted ICML 2026 Paper: **Riemannian MeanFlow for One-Step Generation on Manifolds**
+[ArXiv](https://arxiv.org/abs/2603.10718)
 
 
 
