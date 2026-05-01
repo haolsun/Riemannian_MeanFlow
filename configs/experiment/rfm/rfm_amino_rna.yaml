@@ -1,0 +1,49 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: amino_general
+  - override /model: rfm
+  - override /callbacks: default
+  - override /trainer: default
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["amino", "rna", "rfm"]
+
+seed: 12345
+
+trainer:
+  min_epochs: 1000
+  max_epochs: 1450
+  gradient_clip_val: null
+
+model:
+  optimizer:
+    lr: 1e-4
+    weight_decay: 0.01
+  net:
+    num_layers: 6
+    d_in: 7
+  in_shape:
+    - 7
+
+callbacks:
+  early_stopping:
+    monitor: val/nll
+    mode: min
+
+data:
+  batch_size: 8192
+  data_type: RNA
+  data_dir: data/rna
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "amino"
+  aim:
+    experiment: "amino"

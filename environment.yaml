@@ -1,0 +1,31 @@
+name: rmf
+
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pytorch=2.4.1
+  - torchvision=0.*
+  - lightning=2.*
+  - torchmetrics=0.*
+  - hydra-core=1.*
+  - rich=13.*
+  - pre-commit=3.*
+
+  - wandb
+
+  - pip>=23
+  - pip:
+    - hydra-optuna-sweeper
+    - hydra-colorlog
+    - rootutils
+    - geoopt==0.5.0
+    - geomstats==2.6.0
+    - matplotlib==3.8.4
+    - geopandas==1.1.1
+    - einops==0.8.1
+    - torchdiffeq==0.2.5
+    - scipy==1.10.1

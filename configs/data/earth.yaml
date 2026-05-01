@@ -1,0 +1,5 @@
+_target_: gfm.data.earth_datamodule.EarthDataModule
+batch_size: 8192
+num_workers: 32
+pin_memory: False
+dataset_file: volcano

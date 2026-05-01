@@ -1,0 +1,5 @@
+_target_: gfm.data.amino_datamodule.Top500DataModule
+batch_size: 4096
+num_workers: 32
+pin_memory: False
+data_type: General

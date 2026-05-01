@@ -1,0 +1,4 @@
+_target_: gfm.data.so3_datamodule.SO3DataModule
+batch_size: 1024
+num_workers: 32
+dataset_file: swiss
