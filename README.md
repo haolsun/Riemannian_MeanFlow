@@ -17,7 +17,7 @@ conda activate rmf
 
 3. For the experimental data, please follow the instructions given in the [Riemannian Flow Matching repository](https://github.com/facebookresearch/riemannian-fm) and [Riemannian Consistency Model](https://github.com/ccr-cheng/riemannian-consistency-model). The structure should be:
 ```sh
-rmf/
+Riemannian_MeanFlow/
 ├── configs
 ├── data
     ├──raw
