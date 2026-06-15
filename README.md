@@ -43,8 +43,8 @@ python -m rmf.train experiment=meanflow/meanflow_so3 trainer=cpu seed=0
 
 1. Get data:
 
-There are 8836 files in the [acronym grasp](https://github.com/NVlabs/acronym) dataset.
-There are 7897 files in the [ShapeNetSem dataset](https://huggingface.co/datasets/ShapeNet/ShapeNetSem-archive/tree/main) that follows the same format.
+There are 8836 files in the [acronym grasp](https://github.com/NVlabs/acronym) dataset.  
+There are 7897 files in the [ShapeNetSem dataset](https://huggingface.co/datasets/ShapeNet/ShapeNetSem-archive/tree/main) that follows the same format.  
 Both parts of the data are necessary.
 
 2. Project Structure
@@ -109,12 +109,12 @@ python -m scaffold_lab.unconditional.refolding
 
 ## 5. Acknowledgements
 
-This project builds upon several excellent open-source projects. 
+This project builds upon several excellent open-source projects.   
 We sincerely thank the authors and contributors of these projects for making their code publicly available.
 
-1.[Riemannian Flow Matching repository](https://github.com/facebookresearch/riemannian-fm)
-2.[Generalised Flow Maps](https://github.com/olsdavis/gfm)
-3.[Riemannian Consistency Model](https://github.com/ccr-cheng/riemannian-consistency-model)
-4.[RFM-Grasp](https://github.com/Ferdydh/RFM-Grasp)
-5.[DNA Frame RMF](https://github.com/dongyeop3813/Riemannian-MeanFlow)
-6.[Protein Frame RMF](https://github.com/dongyeop3813/Protein-RMF)
+1.[Riemannian Flow Matching repository](https://github.com/facebookresearch/riemannian-fm)  
+2.[Generalised Flow Maps](https://github.com/olsdavis/gfm)  
+3.[Riemannian Consistency Model](https://github.com/ccr-cheng/riemannian-consistency-model)  
+4.[RFM-Grasp](https://github.com/Ferdydh/RFM-Grasp)  
+5.[DNA Frame RMF](https://github.com/dongyeop3813/Riemannian-MeanFlow)  
+6.[Protein Frame RMF](https://github.com/dongyeop3813/Protein-RMF)  
