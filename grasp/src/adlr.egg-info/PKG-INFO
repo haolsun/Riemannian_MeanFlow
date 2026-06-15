@@ -1,0 +1,105 @@
+Metadata-Version: 2.4
+Name: adlr
+Version: 0.1.0
+Summary: Cool machine learning!
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: einops>=0.8.0
+Requires-Dist: geomstats[pytorch]>=2.8.0
+Requires-Dist: h5py>=3.12.1
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: mesh2sdf>=1.1.0
+Requires-Dist: numpy<2.0.0
+Requires-Dist: pot>=0.9.5
+Requires-Dist: pyglet<2
+Requires-Dist: python-fcl>=0.7.0.6
+Requires-Dist: pytorch-lightning>=2.4.0
+Requires-Dist: rtree>=1.3.0
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: torch>=2.5.1
+Requires-Dist: trimesh>=4.5.3
+Requires-Dist: wandb>=0.19.1
+
+# Project Documentation
+
+Riemannian Flow Matching policy for robot grasping. Basically we developed a model to generate SE(3) grasp positions, given object mesh. The cool thing: the flow matching process is constrained by riemannian manifold.
+
+
+
+
+## Project Structure
+
+```
+.
+├── data/
+├── src/
+│   ├── core/
+│   ├── data/
+│   └── models/
+├── scripts/            # Scripts here
+│   ├── show_grasp.py
+│   ├── sanity_mlp.py
+│   └── sanity_transformer.py
+└── pyproject.toml
+```
+
+## Getting Started
+
+1. Place your dataset in the `data` directory at the project root
+2. Use uv to install :
+   ```bash
+   uv venv
+   uv pip install -e .
+   ```
+
+sudo apt-get install python3-opengl
+sudo apt-get install libgl1-mesa-glx
+
+if you open glb, you can open with glTF Model Viewer extension on vscode
+
+Save with this`uv add your_package`
+
+## Dataset Information
+
+- There are 8836 files in the `acronym grasp` dataset.
+
+- There are 7897 files in the `ShapeNetSem` dataset that follows the same format.
+
+## Available Scripts
+
+Run scripts using:
+
+```bash
+python -m scripts.script_name
+python -m scripts.train_mlp
+python -m scripts.sanity_mlp
+python -m scripts.show_grasp
+python -m scripts.validate_grasp
+```
+
+Current scripts:
+
+- `show_grasp.py`: Visualize dataset
+- `sanity_mlp.py`: Test MLP model
+- `sanity_transformer.py`: Test Transformer model
+
+## Configuration System
+
+The configuration system (defined in `src/core/config.py`) is a crucial component of this project. It provides a robust and type-safe way to configure all aspects of the experiments.
+
+The default dataset split ratio is:
+
+- Training: 90%
+- Validation: 10%
+
+### Quick Start Configuration
+
+For quick experimentation, use:
+
+```python
+from src.core.config import MLPExperiment
+
+config = MLPExperimentConfig.default()
+```
+
+For more detailed configuration options and parameters, refer to the docstrings in `src/core/config.py`.
